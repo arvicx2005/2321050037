@@ -26,13 +26,7 @@ header{
     border-bottom: 5px solid #f1f1f2;
 }
 
-.tintuc{
-    display: flex;
-    justify-content: space-between;
-    width: 1200px;
-    margin: auto ;
 
-}
 h1{
     font-size: 25;
     color: blue;
@@ -56,7 +50,13 @@ nav ul{
 nav li{
     padding: 15px;
 }
+.tintuc{
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: auto ;
 
+}
 .tintuc-1{
     padding-left: 18px;
     margin: 0;
@@ -79,6 +79,7 @@ nav li{
     padding: 40px;
     border: 1px solid #ddd;
     display: flex;
+    justify-content: center;
 }
 
 .thongbao p{
@@ -87,23 +88,91 @@ nav li{
     border-bottom: 2px solid gray;
 
 }
+.trai{
+    margin-left: 250px;
+}
+
+.phai{
+    font-size: 23px;
+    width: auto;
+    margin: auto;
+    margin-right: 250px;
+}
 
 .thongtintuyensinh{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    width: 1200px;
+    margin: auto ;
 }
+
+
 
 .hdsv{
     display: flex;
     justify-content: center;
+    width: 1200px;
+    margin: auto ;
+}
+
+.hdsv-anh{
+    padding-left: 18px;
+    margin: 0;
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 6px;
 }
 
 .doitac{
     display: flex;
     justify-content: center;
+    width: 1200px;
+    margin: auto ;
+}
+
+.noidung{
+    display: flex;
+    justify-content: center;
+    width: 1200px;
+    margin: auto ;  
+}
+
+.noidung-link{
+      margin-bottom: 10px;
+      color: white;
+      background: black;
+      padding: 10px;
+      font-size: 20px;
+      border-right:1px solid gray ;
+}
+
+.noidung-vanban{
+    margin-bottom: 10px;
+    color: white;
+    background: black;
+    padding: 30px;
+
+}
+.noidung-vanban h5{
+    font-size:20px ;
+    border-bottom: 1px solid gray;
+}
+
+.noidung-vanban p{
+    line-height: 3;
+    border-bottom: 1px solid gray;
 }
 
 .end{
     display: flex;
     justify-content: center;
 }
+
+.ttts{
+    padding-left: 18px;
+    margin: 0;
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 6px;
+}
+

@@ -1,0 +1,41 @@
+.body{
+    background-color: black;
+    color: white;
+    line-height: 1.5;
+    height: 100;
+    ;
+}
+
+header{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 15;
+    padding: 75px;
+}
+nav ul li{
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    transition: all ease .4s;
+}
+nav ul li a:hover{
+    color: gray;
+}
+
+.muc1{
+    width: 1500px;
+    background: rgb(74, 71, 71);
+    display: flex;
+    justify-content: space-between;
+}
