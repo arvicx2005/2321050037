@@ -16,7 +16,6 @@ main{
     height: 1200px;
     margin: auto;
     overflow:scroll;
-
 }
 
 
@@ -112,7 +111,7 @@ nav li{
     flex-shrink: 0;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     cursor: pointer;
-    transition: transform 0.2s ease;
+    transition: trnasform 0.2s ease;
 }
 
 .list_1 i{
