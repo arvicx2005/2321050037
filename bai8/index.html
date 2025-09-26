@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 8</title>
+</head>
+<body>
+    <script>
+
+        let thongtinkhachhang = {
+            madonhang:"ST01",
+            hoten:"Lưu Tiến Thành",
+            sdt:"0355897401",
+            trangthai: true,
+            danhsachsanpham:{
+                caphe:{
+                    masp:"HH01",
+                    tensp:"Cà phê",
+                    soluong:200,
+                    cost:25
+                },
+                
+                matcha:{
+                    masp:"HH02",
+                    tensp:"trà Matcha",
+                    soluong:50,
+                    cost:50               
+                },
+
+                trasua:{
+                    masp:"HH03",
+                    tensp:"Trà sữa",
+                    soluong:165,
+                    cost:35                
+                }
+            },
+            trangthaithanhtoan : false,
+            diachigiaohang : "xã Lạc Phượng, thành phố Hải Phòng"
+        }
+
+        
+        document.writeln("tổng giá trị đơn hàng = "
+                    +(thongtinkhachhang.danhsachsanpham.caphe.soluong *thongtinkhachhang.danhsachsanpham.caphe.cost
+                    + thongtinkhachhang.danhsachsanpham.matcha.soluong*thongtinkhachhang.danhsachsanpham.matcha.cost
+                    +thongtinkhachhang.danhsachsanpham.trasua.soluong*thongtinkhachhang.danhsachsanpham.trasua.cost
+                    ) +"<br>")
+        
+        //các thuộc tính của string
+            //độ dài của chuỗi
+            let ten="luu tien thanh";
+            document.writeln(ten.length+"<br>");
+
+            //truy cập vào ký tự của chuỗi
+            let myString = "hello thanh";
+            document.writeln(myString.slice(1,4)+"<br>")
+
+            //thay thế ký tự trong chuỗi
+            document.writeln(myString.replace("hello","hi")+"<br>")
+
+            //đổi chữ hoa/chữ thường: toUpperCase() - chữ hoa  toLowerCase()-chữ thường
+            document.writeln(myString.toLowerCase()+"<br>")
+
+            // tìm kiếm chuỗi indexOf - trả về số; includes trả về true-false
+            document.writeln(myString.includes("t")+"<br>")
+
+            //tách chuỗi thành mảng
+            document.writeln(myString.split('')+"<br>")
+           
+            //kiểm tra chuỗi
+            document.writeln(myString.startsWith("thanh")+"<br>")
+
+        // kiểu NUMBER
+            //định dạng số
+            var pi = 3.14159;
+            document.writeln(pi.toFixed(2)+"<br>")
+            //kiểm tra số
+            document.writeln(isNaN("10")+"<br>")
+
+        // hàm DATE
+            let today = new Date();
+            document.writeln(today +"<br>");
+            //lấy ra năm
+            document.writeln(today.getFullYear()+"<br>");
+            //lấy ra tháng
+            document.writeln(today.getMonth()+"<br>");
+            //lấy ra ngày
+            document.writeln(today.getDate()+"<br>")
+            //lấy ra giờ
+            document.writeln(today.getHours()+"<br>")
+            //lấy ra phút
+            document.writeln(today.getMinutes()+"<br>")
+            //lấy ra giây
+            document.writeln(today.getSeconds()+"<br>")
+
+
+
+    </script>
+</body>
+</html>
