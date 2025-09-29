@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAI 9</title>
+</head>
+<body>
+    <script>
+
+        //MẢNG
+            let arr = [1, 2, 3, 4, 'a', 'b', 'c', 2, 3];
+            let ten = 'ten';
+            let thongtin ={
+                ten: ten
+            };
+
+            // kiểm tra xem có phải là mảng hay không
+            document.writeln(Array.isArray(arr)+"<br>");
+
+            // kiểm tra độ dài của mảng
+            document.writeln(arr.length+"<br>");
+
+            //lấy ra 1 phần tử trong mảng
+            document.writeln(arr[2]+"<br>");
+
+            //kiểm tra xem trong mảng có tồn tại phần tử cần tìm không 
+            // Indexof-trả về phần tử đầu tiên 
+            document.writeln(arr.indexOf(3)+"<br>");
+            // lastIndexof - trả về phần tử cuối cùng
+            document.writeln(arr.lastIndexOf(3)+"<br>");
+
+            //thay đổi 1 giá trị trong mảng
+            arr[3] = 6;
+            document.writeln(arr+"<br>");
+            
+            //ví dụ 1
+            let a,b,c,d;
+            a = [1,2,3];
+            b="JavaScrpit";
+            c = [42,'JS'];
+            d = a.concat(b,c)
+            document.writeln(d+"<br>");
+            document.writeln(Array.isArray(d)+"<br>");
+
+            //ví dụ 2
+            //d=d.join("/");
+            document.writeln(Array.isArray(d)+"<br>");
+            document.writeln(d+"<br>");
+
+            //xóa đi phần tử cuối cùng trong mảng
+            d.pop();
+            document.writeln(d+"<br>");
+
+            //thêm vào mảng
+            d.push("Khởi");
+            document.writeln(d+"<br>");
+
+            //đảo lại mảng
+            d.reverse();
+            document.writeln(d+"<br>");
+
+            //xóa phần tử đầu tiên
+            document.writeln(arr.shift()+"<br>");
+
+            //thêm phần tử vào đầu mảng
+            document.writeln(arr.unshift(3)+"<br>");
+
+        //các câu lệnh điều kiện
+            let so = "100000000000000000000001";
+            let socuoi = parseInt(so[so.length-1])
+            if(socuoi % 2 == 0)
+                { document.writeln(so +" là số chẵn"+"<br>");
+            }
+            else{
+                document.writeln(so+" là số lẻ"+"<br>");
+            }
+
+            //
+            let now = new Date().getHours;
+            if( now >= 5 && now < 10){
+                document.writeln("chào buổi sáng"+"<br>");
+            }
+            else if(now >= 10 && now < 13){
+                document.writeln("chào buổi trưa");
+            }
+            else if(now >=13 && now <17){
+                document.writeln("chào buổi chiều"+"<br>");
+            }
+            else if(now >=17 && now <21){
+                document.writeln("chào buổi tối"+"<br>");
+            }
+            else{
+                document.writeln("chào buổi đêm"+"<br>");
+            }
+
+            //
+            let A = 8;
+            let B = 7;
+            let C = 10;
+            let tongdiem = 0;
+
+            tongdiem = A*0.6 + b*0.3 + c*0.1;
+            if(tongdiem >= 8){
+                document.writeln("bạn được điểm A"+"<br>");
+            }
+            else if(tongdiem >=7 && tongdiem < 8){
+                document.writeln("B"+"<br>");
+            }
+            else if(tongdiem >=5 && tongdiem < 7){
+                document.writeln("C"+"<br>");
+
+            }
+            else if(tongdiem >=4 && tongdiem < 5){
+                document.writeln("D"+"<br>");
+            }
+            else{
+                document.writeln("F"+"<br>");
+            }
+    </script>
+
+</body>
+</html>
