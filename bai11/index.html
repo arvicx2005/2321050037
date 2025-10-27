@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tính Tổng</h1>
+    <div>
+        <p>Nhập vào số thứ nhất</p>
+        <input type="text" id ="sothunhat" >
+    </div>
+
+    <div>
+        <p>Nhập vào số thứ hai</p>
+        <input type="text" id ="sothuhai">
+    </div>
+    <div>
+        <button onclick="tinhtong()">tính tổng</button>
+    </div>
+    <div>
+        kết quả: <input type="number" id ="ketqua" class="ket-qua">
+    </div>
+<script>
+    
+    function tinhtong(){
+        let sothunhat = parseFloat(document.getElementById('sothunhat').value);
+        let sothuhai = parseFloat(document.getElementById('sothuhai').value);
+        //document.writeln(sothunhat);
+        //document.writeln(sothuhai);
+        let tong = sothunhat+ sothuhai; 
+        document.getElementById('ketqua').value = tong;
+        let canhbao =""
+        if(!sothunhat){
+            canhbao+= "nhập lại số thứ 1"
+        }
+
+        if(!sothuhai){
+            canhbao+="nhập lại số thứ 2"
+        }
+        
+        if(canhbao){
+            alert(canhbao)
+        }
+        
+    }
+    </script>
+</body>
+</html>
