@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            display: flex;
+            justify-content: center;
+            padding-top: 25%;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div>
+            <div>
+                <p>nhập vào chiều cao(m)</p>
+                <input type="text" id="chieucao">
+            </div>
+            <div>
+                <p>nhập cân nặng(kg) </p>
+                <input type="text" id="cannang">
+            </div>
+            <div>
+                <button onclick="bmi()">tính BMI</button>
+            </div>
+            <div>
+               <p> kết quả </p>
+                <input type="text"  id="kq">
+                <h1></h1>
+            </div>
+        </div>
+        <div>
+            <img class="images" width="125px" height="250px" src="anh/nen.png" alt="">
+        </div>
+    </div>
+
+    <script>
+        function bmi(){
+            let cao = parseFloat(document.getElementById('chieucao').value);
+            let nang = parseFloat(document.getElementById('cannang').value);
+            let canhbao="";
+            if(!cao){
+                canhbao+="vui lòng nhập đúng giá trị chiều cao\n"
+            }
+            if(!nang){
+                canhbao+="vui lòng nhập đúng giá trị cân nặng\n"
+            }
+            if(canhbao){
+                alert(canhbao);
+            }
+            let tinh = nang/(cao*cao)
+            document.getElementById('kq').value = tinh;
+            if(tinh< 18.5){
+                document.getElementsByClassName('images')[0].src ="anh/thieu.png";
+                document.getElementsByTagName('h1')[0].innerHTML="bạn bị thiếu cân"
+            }
+            else if(tinh >= 18.5 && tinh <25){
+                document.getElementsByClassName('images')[0].src ="anh/binhthuong.png";
+                document.getElementsByTagName('h1')[0].innerHTML="bạn đủ cân"
+            }
+            else if(tinh >= 25 && tinh < 30){
+                document.getElementsByClassName('images')[0].src ="anh/thua.png";
+                document.getElementsByTagName('h1')[0].innerHTML="bạn thừa cân"
+            }
+            else if(tinh >=30 && tinh < 40){
+                document.getElementsByClassName('images')[0].src ="anh/beo1.png";
+                document.getElementsByTagName('h1')[0].innerHTML="bạn bị béo phì nhẹ"
+            }
+            else if(tinh >=40){
+                document.getElementsByClassName('images')[0].src ="anh/beo2.png";
+                document.getElementsByTagName('h1')[0].innerHTML="bạn bị béo phì nặng"
+            }
+        }
+    </script>
+</body>
+</html>

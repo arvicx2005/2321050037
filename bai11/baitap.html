@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <p>tính phương trình bậc 2</p>
+        <p>ax^2 + bx + c = 0</p>
+    </div>
+    <div>
+        <p>nhập giá trị a</p>
+        <input type="text" id ="a">
+    </div>
+    <div>
+        <p>nhập giá trị b</p>
+        <input type="text" id = "b">
+    </div>
+    <div>
+        <p>Nhập giá trị c</p>
+        <input type="text" id = "c">
+    </div>
+    <div>
+        <button onclick="timx()">tính kết quả</button>
+    </div>
+    <div>
+        x1 = <input type="text" id = "kq1">
+    </div>
+    <div>
+        x2 =<input type="text" id = "kq2">
+    </div>
+
+    <script>
+        function timx(){
+            let a = parseFloat(document.getElementById('a').value);
+            let b = parseFloat(document.getElementById('b').value);
+            let c = parseFloat(document.getElementById('c').value);
+            let loi="";
+            if(!a){
+                loi +="vui lòng nhập đúng giá trị a"
+            }
+            if(!b){
+                loi+="vui lòng nhập đúng giá trị b"
+            }
+            if(!c){
+                loi+="vui lòng nhập đúng giá trị c"
+            }
+            if(loi){
+                alert(loi);
+            }
+            if(a == 0 ){
+                let x1 = x2 = -c/b;
+                document.getElementById('kq1').value=x1;
+                document.getElementById('kq2').value=x2;
+            }
+            else{
+                let delta = Math.sqrt(b*b - 4*a*c)
+                let X1 = (-b +delta)/(2*a)
+                let X2 = (-b-delta)/(2*a)
+                document.getElementById('kq1').value= X1;
+                document.getElementById('kq2').value=X2;
+           }
+            
+        }
+
+    </script>
+</body>
+</html>

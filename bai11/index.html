@@ -17,33 +17,66 @@
         <input type="text" id ="sothuhai">
     </div>
     <div>
-        <button onclick="tinhtong()">tính tổng</button>
+        <button onclick="tinhtong('cong')">tính tổng</button>
     </div>
     <div>
         kết quả: <input type="number" id ="ketqua" class="ket-qua">
     </div>
+    <div>
+        <button onclick="tinhtong('tru')">tính hiệu</button>
+    </div>
+    <div>
+        kết quả: <input type="text" id="kq">
+    </div>
+    <div>
+        <button onclick="tinhtong('nhan')">tính tích</button>
+    </div>
+    <div>
+        kết quả: <input type="text" id="kq1">
+    </div>
+    <div>
+        <button onclick="tinhtong('chia')">tính thương</button>
+    </div>
+    <div>
+        kết quả: <input type="text" id="kq2">
+    </div>
 <script>
     
-    function tinhtong(){
+    function tinhtong(pheptinh){
         let sothunhat = parseFloat(document.getElementById('sothunhat').value);
         let sothuhai = parseFloat(document.getElementById('sothuhai').value);
         //document.writeln(sothunhat);
         //document.writeln(sothuhai);
+        if(pheptinh == 'cong'){
         let tong = sothunhat+ sothuhai; 
-        document.getElementById('ketqua').value = tong;
+        document.getElementById('ketqua').value = tong;            
+        }
+        else if(pheptinh == 'tru'){
+        let hieu = sothunhat-sothuhai;
+        document.getElementById('kq').value=hieu;            
+        }
+        else if(pheptinh =='nhan'){
+        let tich = sothunhat*sothuhai;
+        document.getElementById('kq1').value=tich;            
+        }
+
+        else if(pheptinh =='chia'){
+        let thuong = sothunhat/sothuhai;
+        document.getElementById('kq2').value=thuong;            
+        }
+
         let canhbao =""
         if(!sothunhat){
-            canhbao+= "nhập lại số thứ 1"
+            canhbao+= "nhập lại số thứ 1\n"
         }
 
         if(!sothuhai){
-            canhbao+="nhập lại số thứ 2"
+            canhbao+="nhập lại số thứ 2\n"
         }
         
         if(canhbao){
             alert(canhbao)
-        }
-        
+        }        
     }
     </script>
 </body>

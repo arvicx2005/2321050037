@@ -35,27 +35,18 @@
             let diemC = parseFloat(document.getElementById('C').value);
 
             let canhbao ="";
-            if(!diemA){
+            if(!diemA ||diemA > 10 || diemA <0){
                 canhbao+="vui lòng nhập lại điểm A\n " 
-            }
-            if(diemA > 10 || diemA <0){
-                canhbao+="vui lòng nhập đúng điều kiện điểm A\n"
-            }            
+            }   
 
-            if(!diemB){
+            if(!diemB || diemB > 10 || diemB <0){
                 canhbao+="vui lòng nhập lại điểm B\n "
             }
-            if(diemB > 10 || diemB <0){
-                canhbao+="vui lòng nhập đúng điều kiện điểm B\n"
-            }
 
-            if(!diemC){
+            if(!diemC || diemC > 10 || diemC <0){
                 canhbao+="vui lòng nhập lại điểm C\n "
             }
-            if(diemC > 10 || diemC <0){
-                canhbao+="vui lòng nhập đúng điều kiện điểm C\n"
-            }
-
+ 
             if(canhbao){
                 alert(canhbao)
             }
