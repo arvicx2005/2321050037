@@ -1,160 +1,38 @@
-body{
-    background-color: #3b3b3d;
-}
-
-header{
-    background-color: rgb(30, 29, 29);
-    width: 100%;
-    height: 50px;
-}
-
-
-main{
-    color: white;
-    background-color: rgb(36, 34, 34);
-    width: 80%;
-    height: 1200px;
-    margin: auto;
-    overflow:scroll;
-}
-
-
-nav ul{
-    display: flex;
-    justify-content: center;
-}
-nav li{
-    padding: 20px;
-}
-
-.header-thanh{
-    color: white;
-    text-decoration: none;
-}
-
-.main_img{
-    width: 100%;
-}
-
-.main_head{
-    display: flex;
-    display: inline-block;
-    align-items: flex-end;
-    background-image: url(muado.png);
-    width: 100%;
-    height: 36rem;
-    border-radius: 0.75rem;
-    margin: 0.75rem 0 1.75rem 0;
-    padding: 0.75rem 1rem;
-}
-
-
-
-.head_icon{
-    font-size: 18px;
-    text-decoration: none;
-    padding-left: 8%;
-    background-color: rgb(86, 88, 90);
-    height: 1.5rem;
-    border-radius: 0.75rem;
-    margin: 0.75rem 0 1.75rem 0;
-    padding: 0.75rem 1rem;
-}
-
-.main_body_2{
-    display: flex;
-    justify-content: space-between;
-}
-
-.main_chu{
-    color: white;
-    text-decoration: none;
-    line-height: 10px;
-}
-
-.main_body_3{
-    white-space: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-behavior: smooth;
-}
-
-.chinh{
-    width: 300px;
-}
-
-.main_body_4{
+.scroll-container {
   display: flex;
-  gap: 20px;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.scroll-content {
+  display: flex;
   overflow-x: auto;
-  padding-bottom: 10px;
+  scroll-behavior: smooth;
+  width: 80%;
 }
 
-.list{
-    display: inline-block;
-    padding-right: 10px;
+.item {
+  min-width: 150px;
+  margin: 10px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.list_1{
-    min-width: 180px;
-    height: 120px;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-    flex-shrink: 0;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    cursor: pointer;
-    transition: trnasform 0.2s ease;
+.scroll-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 5px;
 }
 
-.list_1 i{
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.xanh{
-    background-color: blue;
-}
-.do{
-    background-color: red;
-}
-
-.tim{
- background-color: purple;
-}
-
-.vang{
-    background-color: yellow;
-}
-
-.luc{
-    background-color: green;
-}
-
-.lam{
-    background-color: blue;
-}
-
-.cham{
-    background-color: darkgray;
-}
-
-.cam{
-    background-color: orange;
-}
-
-
-.vien{
-    border-top: 1px solid gray;
-}
-
-.footer_top{
-    border-bottom: 1px solid gray;
-    display: flex;
-    justify-content: space-around;
+.scroll-btn:hover {
+  background-color: #0056b3;
 }
